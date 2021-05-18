@@ -24,7 +24,7 @@ after that time,  ans/hcf = r1 (the quotent of last step, when reminder = 0) or 
 
 */
 
-int lcm(int, int);
+int HCF(int, int);
 
 int main ()
 {
@@ -51,7 +51,7 @@ int main ()
         }
         
     }
-    ans = lcm(l,s);
+    ans = HCF(l,s);
     cout<<"HCF = "<<ans<<endl;
     cout<<"LCM = "<<(a*b)/ans<<endl;
     
@@ -60,7 +60,7 @@ int main ()
 
 // recursive form of LCM function. (note here we can also pass (a,b) / (small, large), as than after first pass/round it will
 //  automatically become (large, small)  as small % large = small ).
-int lcm(int l, int s)
+int HCF(int l, int s)
 {
     if(l%s == 0)
     {
@@ -68,7 +68,7 @@ int lcm(int l, int s)
     }
     else
     {
-        return lcm(s, l%s);
+        return HCF(s, l%s);
     }
     
 }
